@@ -6,6 +6,21 @@
     Version: 1.0
   */
  
+/* 文字列を ASCIIコードに変換する */
+function str2ascii($str) {
+    $i = 0;
+    $delim = ',';
+    $result = '';
+    while (($char = substr($str, $i++, 1)) !== false) {
+        if ($i > 1) {
+            $result .= $delim;
+        }
+        $result .= ord($char);
+    }
+    return $result;
+}
+
+/* メールアドレスを Local part, Domain Part に分割し ASCIIコードに変換し、表示用 Javascript を生成する */
 function get_mail_code_shortcode($atts) {
     extract(shortcode_atts(array(
                                  'mail' => '',
