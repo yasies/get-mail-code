@@ -2,7 +2,7 @@
   /*
     Plugin Name: Get Mail Code
     Description: メールアドレスを ASCIIコード に変換し Javascript で表示する
-    Author: yasu@tcp
+    Author: yasies
     Version: 1.0
   */
  
